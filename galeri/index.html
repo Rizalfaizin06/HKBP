@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - HKBP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">H</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">HKBP</h1>
+                        <p class="text-xs text-gray-600">Huria Kristen Batak Protestan</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-900 transition">Home</a>
+                    <a href="/tentang" class="text-gray-700 hover:text-blue-900 transition">Tentang Kami</a>
+                    <a href="/warta" class="text-gray-700 hover:text-blue-900 transition">Warta Jemaat</a>
+                    <a href="/#berita" class="text-gray-700 hover:text-blue-900 transition">Berita</a>
+                    <a href="/pelayanan" class="text-gray-700 hover:text-blue-900 transition">Pelayanan</a>
+                    <a href="/galeri" class="text-blue-900 font-semibold hover:text-blue-700 transition">Galeri</a>
+                    <a href="/kontak" class="text-gray-700 hover:text-blue-900 transition">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-4" id="mobileMenu">
+                <a href="/" class="block py-2 text-gray-700">Home</a>
+                <a href="/tentang" class="block py-2 text-gray-700 hover:text-blue-900">Tentang Kami</a>
+                <a href="/warta" class="block py-2 text-gray-700 hover:text-blue-900">Warta Jemaat</a>
+                <a href="/#berita" class="block py-2 text-gray-700 hover:text-blue-900">Berita</a>
+                <a href="/pelayanan" class="block py-2 text-gray-700 hover:text-blue-900">Pelayanan</a>
+                <a href="/galeri" class="block py-2 text-blue-900 font-semibold">Galeri</a>
+                <a href="/kontak" class="block py-2 text-gray-700 hover:text-blue-900">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 mt-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920" alt="Galeri HKBP"
+                class="w-full h-full object-cover mix-blend-overlay">
+        </div>
+
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Galeri</h1>
+                <p class="text-xl md:text-2xl">Dokumentasi Kegiatan & Momen Berkesan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="/" class="hover:text-blue-900">Home</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span class="text-blue-900 font-semibold">Galeri</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <section class="py-8 bg-white sticky top-16 z-40 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button onclick="filterGallery('all')"
+                    class="filter-btn active px-6 py-2 rounded-full font-semibold transition">
+                    <i class="fas fa-th mr-2"></i>Semua
+                </button>
+                <button onclick="filterGallery('foto')"
+                    class="filter-btn px-6 py-2 rounded-full font-semibold transition">
+                    <i class="fas fa-camera mr-2"></i>Foto
+                </button>
+                <button onclick="filterGallery('video')"
+                    class="filter-btn px-6 py-2 rounded-full font-semibold transition">
+                    <i class="fas fa-video mr-2"></i>Video
+                </button>
+                <button onclick="filterGallery('ibadah')"
+                    class="filter-btn px-6 py-2 rounded-full font-semibold transition">
+                    <i class="fas fa-church mr-2"></i>Ibadah
+                </button>
+                <button onclick="filterGallery('acara')"
+                    class="filter-btn px-6 py-2 rounded-full font-semibold transition">
+                    <i class="fas fa-calendar-alt mr-2"></i>Acara Khusus
+                </button>
+                <button onclick="filterGallery('pelayanan')"
+                    class="filter-btn px-6 py-2 rounded-full font-semibold transition">
+                    <i class="fas fa-hands-helping mr-2"></i>Pelayanan
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid - Foto -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- Foto Item 1 -->
+                <div class="gallery-item foto ibadah group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1200', 'Ibadah Minggu', 'Kebaktian Minggu Pagi - 19 Januari 2026')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600"
+                            alt="Ibadah Minggu"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Ibadah Minggu</h3>
+                                <p class="text-sm">19 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 2 -->
+                <div class="gallery-item foto acara group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200', 'Natal Bersama', 'Perayaan Natal Jemaat - 25 Desember 2025')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600"
+                            alt="Natal Bersama"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Natal Bersama</h3>
+                                <p class="text-sm">25 Desember 2025</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 3 -->
+                <div class="gallery-item foto pelayanan group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1509230722995-c555f3a2e78b?w=1200', 'Bakti Sosial', 'Pelayanan di Panti Asuhan - 15 Januari 2026')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1509230722995-c555f3a2e78b?w=600" alt="Bakti Sosial"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Bakti Sosial</h3>
+                                <p class="text-sm">15 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 1 -->
+                <div class="gallery-item video ibadah group cursor-pointer"
+                    onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Live Stream Ibadah Minggu')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Video Ibadah"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                                <i class="fas fa-play text-white text-2xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Live Stream Ibadah</h3>
+                                <p class="text-sm">12 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-video mr-1"></i>Video
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 4 -->
+                <div class="gallery-item foto acara group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1464047736614-af63643285bf?w=1200', 'Retreat Pemuda', 'NHKBP Retreat 2026')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1464047736614-af63643285bf?w=600"
+                            alt="Retreat Pemuda"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Retreat Pemuda</h3>
+                                <p class="text-sm">5-7 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 5 -->
+                <div class="gallery-item foto ibadah group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1516450137517-162bfbeb8dba?w=1200', 'Paduan Suara', 'Penampilan Paduan Suara Minggu Pagi')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1516450137517-162bfbeb8dba?w=600" alt="Paduan Suara"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Paduan Suara</h3>
+                                <p class="text-sm">12 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 6 -->
+                <div class="gallery-item foto pelayanan group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200', 'Sekolah Minggu', 'Kegiatan Sekolah Minggu Anak-anak')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600"
+                            alt="Sekolah Minggu"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Sekolah Minggu</h3>
+                                <p class="text-sm">12 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="gallery-item video acara group cursor-pointer"
+                    onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Highlights Natal 2025')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=600" alt="Video Natal"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                                <i class="fas fa-play text-white text-2xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Highlights Natal 2025</h3>
+                                <p class="text-sm">25 Desember 2025</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-video mr-1"></i>Video
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 7 -->
+                <div class="gallery-item foto acara group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1519167758481-83f29da8c4a3?w=1200', 'Paskah 2025', 'Perayaan Paskah Jemaat')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c4a3?w=600" alt="Paskah"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Paskah 2025</h3>
+                                <p class="text-sm">April 2025</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 8 -->
+                <div class="gallery-item foto pelayanan group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200', 'Kunjungan Pastoral', 'Kunjungan ke Rumah Jemaat')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600"
+                            alt="Kunjungan Pastoral"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Kunjungan Pastoral</h3>
+                                <p class="text-sm">8 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="gallery-item video pelayanan group cursor-pointer"
+                    onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Kesaksian Jemaat')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?w=600"
+                            alt="Video Kesaksian"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                                <i class="fas fa-play text-white text-2xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Kesaksian Jemaat</h3>
+                                <p class="text-sm">5 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-video mr-1"></i>Video
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 9 -->
+                <div class="gallery-item foto ibadah group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1200', 'Ibadah Syukur', 'Ibadah Syukur Tahun Baru 2026')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600"
+                            alt="Ibadah Syukur"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Ibadah Syukur</h3>
+                                <p class="text-sm">1 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto Item 10 -->
+                <div class="gallery-item foto acara group cursor-pointer"
+                    onclick="openLightbox('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=1200', 'Komsel & Fellowship', 'Persekutuan Kelompok Kecil')">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600" alt="Komsel"
+                            class="w-full h-64 object-cover group-hover:scale-110 transition duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                <h3 class="font-bold text-lg">Komsel & Fellowship</h3>
+                                <p class="text-sm">3 Januari 2026</p>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-3 right-3 bg-blue-900 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <i class="fas fa-camera mr-1"></i>Foto
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightboxModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <button onclick="closeLightbox()"
+            class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition z-10">
+            <i class="fas fa-times"></i>
+        </button>
+        <button onclick="previousImage()"
+            class="absolute left-4 text-white text-4xl hover:text-gray-300 transition hidden md:block">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button onclick="nextImage()"
+            class="absolute right-4 text-white text-4xl hover:text-gray-300 transition hidden md:block">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="max-w-6xl w-full">
+            <img id="lightboxImage" src="" alt="" class="w-full h-auto max-h-screen object-contain">
+            <div class="text-white text-center mt-4">
+                <h3 id="lightboxTitle" class="text-2xl font-bold mb-2"></h3>
+                <p id="lightboxDesc" class="text-gray-300"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <button onclick="closeVideoModal()"
+            class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition z-10">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="max-w-5xl w-full">
+            <div class="relative" style="padding-bottom: 56.25%; height: 0;">
+                <iframe id="videoFrame" class="absolute top-0 left-0 w-full h-full" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="text-white text-center mt-4">
+                <h3 id="videoTitle" class="text-2xl font-bold"></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HKBP</h3>
+                    <p class="text-gray-400 text-sm">Huria Kristen Batak Protestan, melayani dengan kasih dan
+                        mengabarkan Injil Kristus.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Menu Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tentang.html" class="text-gray-400 hover:text-white transition">Tentang Kami</a>
+                        </li>
+                        <li><a href="#warta" class="text-gray-400 hover:text-white transition">Warta Jemaat</a></li>
+                        <li><a href="#berita" class="text-gray-400 hover:text-white transition">Berita</a></li>
+                        <li><a href="pelayanan.html" class="text-gray-400 hover:text-white transition">Pelayanan</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Jl. Gereja No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone mr-2"></i>(021) 1234-5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@hkbp.or.id</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 HKBP - Huria Kristen Batak Protestan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Gallery Filter
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active button
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-900', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            event.target.classList.add('active', 'bg-blue-900', 'text-white');
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else if (item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.add('bg-gray-200', 'text-gray-700');
+        });
+        document.querySelector('.filter-btn.active').classList.remove('bg-gray-200', 'text-gray-700');
+        document.querySelector('.filter-btn.active').classList.add('bg-blue-900', 'text-white');
+
+        // Lightbox functionality
+        let currentImageIndex = 0;
+        let images = [];
+
+        function collectImages() {
+            images = Array.from(document.querySelectorAll('.gallery-item.foto')).map(item => {
+                const img = item.querySelector('img');
+                const title = item.querySelector('.font-bold');
+                const desc = item.querySelector('.text-sm');
+                return {
+                    src: img.src.replace('w=600', 'w=1200'),
+                    title: title ? title.textContent : '',
+                    desc: desc ? desc.textContent : ''
+                };
+            });
+        }
+
+        function openLightbox(imageSrc, title, description) {
+            collectImages();
+            currentImageIndex = images.findIndex(img => img.src === imageSrc);
+
+            document.getElementById('lightboxImage').src = imageSrc;
+            document.getElementById('lightboxTitle').textContent = title;
+            document.getElementById('lightboxDesc').textContent = description;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            const img = images[currentImageIndex];
+            document.getElementById('lightboxImage').src = img.src;
+            document.getElementById('lightboxTitle').textContent = img.title;
+            document.getElementById('lightboxDesc').textContent = img.desc;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            const img = images[currentImageIndex];
+            document.getElementById('lightboxImage').src = img.src;
+            document.getElementById('lightboxTitle').textContent = img.title;
+            document.getElementById('lightboxDesc').textContent = img.desc;
+        }
+
+        // Video Modal
+        function openVideoModal(videoUrl, title) {
+            document.getElementById('videoFrame').src = videoUrl;
+            document.getElementById('videoTitle').textContent = title;
+            document.getElementById('videoModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            document.getElementById('videoFrame').src = '';
+            document.getElementById('videoModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                closeVideoModal();
+            } else if (e.key === 'ArrowLeft' && !document.getElementById('lightboxModal').classList.contains('hidden')) {
+                previousImage();
+            } else if (e.key === 'ArrowRight' && !document.getElementById('lightboxModal').classList.contains('hidden')) {
+                nextImage();
+            }
+        });
+
+        // Close modals when clicking outside
+        document.getElementById('lightboxModal').addEventListener('click', (e) => {
+            if (e.target.id === 'lightboxModal') {
+                closeLightbox();
+            }
+        });
+
+        document.getElementById('videoModal').addEventListener('click', (e) => {
+            if (e.target.id === 'videoModal') {
+                closeVideoModal();
+            }
+        });
+
+        // Initialize images collection
+        collectImages();
+    </script>
+
+    <style>
+        .filter-btn.active {
+            background-color: #1e3a8a;
+            color: white;
+        }
+
+        .gallery-item {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth transitions */
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+    </style>
+</body>
+
+</html>

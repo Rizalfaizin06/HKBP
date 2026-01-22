@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - HKBP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">H</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">HKBP</h1>
+                        <p class="text-xs text-gray-600">Huria Kristen Batak Protestan</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-900 transition">Home</a>
+                    <a href="/tentang" class="text-gray-700 hover:text-blue-900 transition">Tentang Kami</a>
+                    <a href="/warta" class="text-gray-700 hover:text-blue-900 transition">Warta Jemaat</a>
+                    <a href="/#berita" class="text-gray-700 hover:text-blue-900 transition">Berita</a>
+                    <a href="/pelayanan" class="text-gray-700 hover:text-blue-900 transition">Pelayanan</a>
+                    <a href="/galeri" class="text-gray-700 hover:text-blue-900 transition">Galeri</a>
+                    <a href="/kontak" class="text-blue-900 font-semibold hover:text-blue-700 transition">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-4" id="mobileMenu">
+                <a href="/" class="block py-2 text-gray-700">Home</a>
+                <a href="/tentang" class="block py-2 text-gray-700 hover:text-blue-900">Tentang Kami</a>
+                <a href="/warta" class="block py-2 text-gray-700 hover:text-blue-900">Warta Jemaat</a>
+                <a href="/#berita" class="block py-2 text-gray-700 hover:text-blue-900">Berita</a>
+                <a href="/pelayanan" class="block py-2 text-gray-700 hover:text-blue-900">Pelayanan</a>
+                <a href="/galeri" class="block py-2 text-gray-700 hover:text-blue-900">Galeri</a>
+                <a href="/kontak" class="block py-2 text-blue-900 font-semibold">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 mt-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920" alt="Kontak HKBP"
+                class="w-full h-full object-cover mix-blend-overlay">
+        </div>
+
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Hubungi Kami</h1>
+                <p class="text-xl md:text-2xl">Mari Terhubung dan Bersekutu Bersama</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="/" class="hover:text-blue-900">Home</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span class="text-blue-900 font-semibold">Kontak</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Cards -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                <!-- Alamat -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Alamat</h3>
+                    <p class="text-gray-600">Jl. Gereja Raya No. 123<br>Kelurahan Menteng<br>Jakarta Pusat 10310<br>DKI
+                        Jakarta</p>
+                </div>
+
+                <!-- Telepon -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Telepon</h3>
+                    <p class="text-gray-600 mb-2">
+                        <a href="tel:+622112345678" class="hover:text-blue-900 transition">(021) 1234-5678</a>
+                    </p>
+                    <p class="text-gray-600">
+                        <a href="https://wa.me/6281234567890" class="hover:text-blue-900 transition">
+                            <i class="fab fa-whatsapp mr-1"></i>0812-3456-7890
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Email -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600 mb-2">
+                        <a href="mailto:info@hkbp.or.id" class="hover:text-blue-900 transition">info@hkbp.or.id</a>
+                    </p>
+                    <p class="text-gray-600">
+                        <a href="mailto:pendeta@hkbp.or.id"
+                            class="hover:text-blue-900 transition">pendeta@hkbp.or.id</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Form Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Map -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Lokasi Kami</h2>
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="h-96 bg-gray-200">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.1944491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sNational%20Monument!5e0!3m2!1sen!2sid!4v1234567890"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                            <div class="p-6 bg-blue-900 text-white">
+                                <h4 class="font-bold mb-2">Petunjuk Arah</h4>
+                                <ul class="text-sm space-y-1 text-blue-100">
+                                    <li><i class="fas fa-circle text-xs mr-2"></i>15 menit dari Stasiun Gambir</li>
+                                    <li><i class="fas fa-circle text-xs mr-2"></i>10 menit dari Bundaran HI</li>
+                                    <li><i class="fas fa-circle text-xs mr-2"></i>Dekat dengan halte Busway Menteng</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Kirim Pesan</h2>
+                        <div class="bg-white rounded-lg shadow-lg p-8">
+                            <form id="contactForm" class="space-y-6">
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Nama Lengkap *</label>
+                                    <input type="text" id="nama"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition"
+                                        placeholder="Masukkan nama lengkap Anda" required>
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                                        <input type="email" id="email"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition"
+                                            placeholder="email@example.com" required>
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Telepon</label>
+                                        <input type="tel" id="telepon"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition"
+                                            placeholder="0812-xxxx-xxxx">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Subjek *</label>
+                                    <select id="subjek"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition"
+                                        required>
+                                        <option value="">Pilih Subjek</option>
+                                        <option value="informasi">Informasi Umum</option>
+                                        <option value="ibadah">Jadwal Ibadah</option>
+                                        <option value="pelayanan">Bergabung dalam Pelayanan</option>
+                                        <option value="pastoral">Kunjungan Pastoral</option>
+                                        <option value="doa">Permintaan Doa</option>
+                                        <option value="lainnya">Lainnya</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Pesan *</label>
+                                    <textarea id="pesan" rows="5"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition resize-none"
+                                        placeholder="Tulis pesan Anda di sini..." required></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition flex items-center justify-center">
+                                    <i class="fas fa-paper-plane mr-2"></i>Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Hours -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Jam Pelayanan Kantor</h2>
+                <div class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-lg shadow-xl p-8 text-white">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 flex items-center">
+                                <i class="far fa-calendar mr-3"></i>Hari Kerja
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center pb-2 border-b border-blue-600">
+                                    <span>Senin - Jumat</span>
+                                    <span class="font-semibold">09:00 - 17:00</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-2 border-b border-blue-600">
+                                    <span>Sabtu</span>
+                                    <span class="font-semibold">09:00 - 14:00</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span>Minggu & Hari Libur</span>
+                                    <span class="font-semibold text-yellow-300">Tutup</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 flex items-center">
+                                <i class="fas fa-church mr-3"></i>Jadwal Ibadah
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center pb-2 border-b border-blue-600">
+                                    <span>Ibadah I (Minggu)</span>
+                                    <span class="font-semibold">07:00 WIB</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-2 border-b border-blue-600">
+                                    <span>Ibadah II (Minggu)</span>
+                                    <span class="font-semibold">09:00 WIB</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span>Ibadah Sore (Minggu)</span>
+                                    <span class="font-semibold">17:00 WIB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank Account Info -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Informasi Persembahan</h2>
+                    <p class="text-gray-600">Untuk persembahan atau donasi, dapat ditransfer ke rekening berikut</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- BCA -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-university text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Bank BCA</h3>
+                                <p class="text-sm text-gray-600">KCP Jakarta Menteng</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div>
+                                <p class="text-sm text-gray-600">Nomor Rekening</p>
+                                <p class="text-xl font-bold text-gray-800 flex items-center justify-between">
+                                    1234567890
+                                    <button onclick="copyToClipboard('1234567890', 'BCA')"
+                                        class="text-blue-900 hover:text-blue-700 text-sm">
+                                        <i class="far fa-copy"></i>
+                                    </button>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Atas Nama</p>
+                                <p class="font-semibold text-gray-800">HKBP Jakarta Pusat</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mandiri -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-yellow-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-university text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Bank Mandiri</h3>
+                                <p class="text-sm text-gray-600">KCP Jakarta Menteng</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div>
+                                <p class="text-sm text-gray-600">Nomor Rekening</p>
+                                <p class="text-xl font-bold text-gray-800 flex items-center justify-between">
+                                    0987654321
+                                    <button onclick="copyToClipboard('0987654321', 'Mandiri')"
+                                        class="text-blue-900 hover:text-blue-700 text-sm">
+                                        <i class="far fa-copy"></i>
+                                    </button>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Atas Nama</p>
+                                <p class="font-semibold text-gray-800">HKBP Jakarta Pusat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-blue-50 border-l-4 border-blue-900 p-4 rounded">
+                    <p class="text-sm text-gray-700">
+                        <i class="fas fa-info-circle text-blue-900 mr-2"></i>
+                        <strong>Catatan:</strong> Mohon konfirmasi transfer Anda melalui WhatsApp atau email dengan
+                        menyertakan bukti transfer dan keterangan persembahan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Ikuti Media Sosial Kami</h2>
+                <p class="text-gray-600 mb-8">Tetap terhubung dan dapatkan update terbaru dari kami</p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center">
+                        <i class="fab fa-facebook-f text-xl mr-3"></i>
+                        <div class="text-left">
+                            <div class="text-xs opacity-80">Facebook</div>
+                            <div>HKBP Jakarta Pusat</div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center">
+                        <i class="fab fa-instagram text-xl mr-3"></i>
+                        <div class="text-left">
+                            <div class="text-xs opacity-80">Instagram</div>
+                            <div>@hkbpjakpus</div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center">
+                        <i class="fab fa-youtube text-xl mr-3"></i>
+                        <div class="text-left">
+                            <div class="text-xs opacity-80">YouTube</div>
+                            <div>HKBP Jakarta Pusat</div>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center">
+                        <i class="fab fa-whatsapp text-xl mr-3"></i>
+                        <div class="text-left">
+                            <div class="text-xs opacity-80">WhatsApp</div>
+                            <div>0812-3456-7890</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HKBP</h3>
+                    <p class="text-gray-400 text-sm">Huria Kristen Batak Protestan, melayani dengan kasih dan
+                        mengabarkan Injil Kristus.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Menu Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tentang.html" class="text-gray-400 hover:text-white transition">Tentang Kami</a>
+                        </li>
+                        <li><a href="#warta" class="text-gray-400 hover:text-white transition">Warta Jemaat</a></li>
+                        <li><a href="#berita" class="text-gray-400 hover:text-white transition">Berita</a></li>
+                        <li><a href="pelayanan.html" class="text-gray-400 hover:text-white transition">Pelayanan</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Jl. Gereja No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone mr-2"></i>(021) 1234-5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@hkbp.or.id</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 HKBP - Huria Kristen Batak Protestan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-8 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check text-green-600 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Pesan Terkirim!</h3>
+            <p class="text-gray-600 mb-6">Terima kasih telah menghubungi kami. Pesan Anda akan segera kami proses.</p>
+            <button onclick="closeSuccessModal()"
+                class="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+                Tutup
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const telepon = document.getElementById('telepon').value;
+            const subjek = document.getElementById('subjek').value;
+            const pesan = document.getElementById('pesan').value;
+
+            // Here you would normally send the data to a server
+            console.log('Form Data:', { nama, email, telepon, subjek, pesan });
+
+            // Show success modal
+            document.getElementById('successModal').classList.remove('hidden');
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+        });
+
+        // Close Success Modal
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+
+        // Copy to Clipboard Function
+        function copyToClipboard(text, bankName) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Create temporary notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in';
+                notification.innerHTML = `<i class="fas fa-check-circle mr-2"></i>Nomor rekening ${bankName} berhasil disalin!`;
+                document.body.appendChild(notification);
+
+                // Remove notification after 3 seconds
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+            }).catch(err => {
+                console.error('Gagal menyalin:', err);
+            });
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('successModal').addEventListener('click', (e) => {
+            if (e.target.id === 'successModal') {
+                closeSuccessModal();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out;
+        }
+    </style>
+</body>
+
+</html>

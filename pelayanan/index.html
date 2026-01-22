@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelayanan - HKBP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">H</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">HKBP</h1>
+                        <p class="text-xs text-gray-600">Huria Kristen Batak Protestan</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-900 transition">Home</a>
+                    <a href="/tentang" class="text-gray-700 hover:text-blue-900 transition">Tentang Kami</a>
+                    <a href="/warta" class="text-gray-700 hover:text-blue-900 transition">Warta Jemaat</a>
+                    <a href="/#berita" class="text-gray-700 hover:text-blue-900 transition">Berita</a>
+                    <a href="/pelayanan"
+                        class="text-blue-900 font-semibold hover:text-blue-700 transition">Pelayanan</a>
+                    <a href="/galeri" class="text-gray-700 hover:text-blue-900 transition">Galeri</a>
+                    <a href="/kontak" class="text-gray-700 hover:text-blue-900 transition">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-4" id="mobileMenu">
+                <a href="/" class="block py-2 text-gray-700">Home</a>
+                <a href="/tentang" class="block py-2 text-gray-700 hover:text-blue-900">Tentang Kami</a>
+                <a href="/warta" class="block py-2 text-gray-700 hover:text-blue-900">Warta Jemaat</a>
+                <a href="/#berita" class="block py-2 text-gray-700 hover:text-blue-900">Berita</a>
+                <a href="/pelayanan" class="block py-2 text-blue-900 font-semibold">Pelayanan</a>
+                <a href="/galeri" class="block py-2 text-gray-700 hover:text-blue-900">Galeri</a>
+                <a href="/kontak" class="block py-2 text-gray-700 hover:text-blue-900">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 mt-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1920" alt="Pelayanan HKBP"
+                class="w-full h-full object-cover mix-blend-overlay">
+        </div>
+
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Pelayanan</h1>
+                <p class="text-xl md:text-2xl">Melayani dengan Kasih di Setiap Generasi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="/" class="hover:text-blue-900">Home</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span class="text-blue-900 font-semibold">Pelayanan</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Bidang Pelayanan HKBP</h2>
+                <div class="w-24 h-1 bg-blue-900 mx-auto mb-6"></div>
+                <p class="text-gray-600 text-lg">
+                    Kami melayani dengan kasih di berbagai bidang untuk membangun jemaat yang dewasa dalam iman,
+                    dari anak-anak hingga lansia, dari pemuda hingga orang tua.
+                </p>
+            </div>
+
+            <!-- Grid Pelayanan -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Sekolah Minggu -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group cursor-pointer"
+                    onclick="showDetail('sekolahMinggu')">
+                    <div
+                        class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-child text-white text-6xl group-hover:scale-110 transition"></i>
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Sekolah Minggu</h3>
+                        <p class="text-gray-600 mb-4">Pembinaan iman untuk anak-anak usia 3-12 tahun dengan metode
+                            pembelajaran yang menyenangkan.</p>
+                        <div class="flex items-center text-blue-900 font-semibold">
+                            <span>Lihat Detail</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NHKBP (Pemuda) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group cursor-pointer"
+                    onclick="showDetail('nhkbp')">
+                    <div
+                        class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-users text-white text-6xl group-hover:scale-110 transition"></i>
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">NHKBP (Pemuda)</h3>
+                        <p class="text-gray-600 mb-4">Naposobuhi HKBP untuk pemuda usia 13-35 tahun, mengembangkan
+                            kepemimpinan dan spiritualitas.</p>
+                        <div class="flex items-center text-blue-900 font-semibold">
+                            <span>Lihat Detail</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ODHKBP (Perempuan) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group cursor-pointer"
+                    onclick="showDetail('odhkbp')">
+                    <div
+                        class="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-female text-white text-6xl group-hover:scale-110 transition"></i>
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">ODHKBP (Perempuan)</h3>
+                        <p class="text-gray-600 mb-4">Organisasi Perempuan HKBP yang mengembangkan pelayanan dan
+                            pemberdayaan kaum perempuan.</p>
+                        <div class="flex items-center text-blue-900 font-semibold">
+                            <span>Lihat Detail</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LHKBP (Laki-laki) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group cursor-pointer"
+                    onclick="showDetail('lhkbp')">
+                    <div
+                        class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-male text-white text-6xl group-hover:scale-110 transition"></i>
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">LHKBP (Laki-laki)</h3>
+                        <p class="text-gray-600 mb-4">Organisasi Laki-laki HKBP yang fokus pada pembinaan spiritual dan
+                            kepemimpinan keluarga.</p>
+                        <div class="flex items-center text-blue-900 font-semibold">
+                            <span>Lihat Detail</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mamre (Lansia) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group cursor-pointer"
+                    onclick="showDetail('mamre')">
+                    <div
+                        class="h-48 bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-heart text-white text-6xl group-hover:scale-110 transition"></i>
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Mamre (Lansia)</h3>
+                        <p class="text-gray-600 mb-4">Pelayanan khusus untuk jemaat lanjut usia dengan program kesehatan
+                            dan spiritual.</p>
+                        <div class="flex items-center text-blue-900 font-semibold">
+                            <span>Lihat Detail</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paduan Suara -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition group cursor-pointer"
+                    onclick="showDetail('paduanSuara')">
+                    <div
+                        class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-music text-white text-6xl group-hover:scale-110 transition"></i>
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Paduan Suara</h3>
+                        <p class="text-gray-600 mb-4">Pelayanan musik dan pujian untuk memperindah ibadah dan memuliakan
+                            Tuhan.</p>
+                        <div class="flex items-center text-blue-900 font-semibold">
+                            <span>Lihat Detail</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Detail Pelayanan -->
+    <div id="detailModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-800"></h3>
+                <button onclick="closeDetail()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div id="modalContent" class="p-6"></div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">Bergabunglah dalam Pelayanan</h2>
+                <p class="text-xl mb-8">Tuhan memanggil setiap kita untuk melayani sesuai dengan karunia dan talenta
+                    yang diberikan</p>
+                <a href="#kontak"
+                    class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center">
+                    <i class="fas fa-hands-helping mr-2"></i>Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HKBP</h3>
+                    <p class="text-gray-400 text-sm">Huria Kristen Batak Protestan, melayani dengan kasih dan
+                        mengabarkan Injil Kristus.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Menu Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tentang.html" class="text-gray-400 hover:text-white transition">Tentang Kami</a>
+                        </li>
+                        <li><a href="#warta" class="text-gray-400 hover:text-white transition">Warta Jemaat</a></li>
+                        <li><a href="#berita" class="text-gray-400 hover:text-white transition">Berita</a></li>
+                        <li><a href="pelayanan.html" class="text-gray-400 hover:text-white transition">Pelayanan</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Jl. Gereja No. 123, Jakarta</li>
+                        <li><i class="fas fa-phone mr-2"></i>(021) 1234-5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@hkbp.or.id</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 HKBP - Huria Kristen Batak Protestan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Data detail pelayanan
+        const pelayananData = {
+            sekolahMinggu: {
+                title: 'Sekolah Minggu',
+                icon: 'fa-child',
+                color: 'from-yellow-400 to-orange-500',
+                content: `
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 pb-4 border-b">
+                            <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-child text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">Sekolah Minggu</h4>
+                                <p class="text-gray-600">Usia 3-12 Tahun</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Tentang Program</h5>
+                            <p class="text-gray-600">
+                                Sekolah Minggu adalah program pembinaan iman untuk anak-anak yang dirancang dengan metode pembelajaran yang menyenangkan, 
+                                interaktif, dan sesuai dengan tahap perkembangan anak. Kami percaya bahwa masa kanak-kanak adalah waktu yang penting 
+                                untuk menanamkan nilai-nilai kristiani.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Kegiatan Rutin</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-yellow-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Kebaktian Anak</h6>
+                                        <p class="text-sm text-gray-600">Setiap Minggu pukul 09:00 WIB</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-yellow-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Cerita Alkitab</h6>
+                                        <p class="text-sm text-gray-600">Metode storytelling interaktif</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-yellow-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Kreativitas & Seni</h6>
+                                        <p class="text-sm text-gray-600">Menggambar, mewarnai, kerajinan tangan</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-yellow-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Hafalan & Pujian</h6>
+                                        <p class="text-sm text-gray-600">Ayat emas dan lagu rohani</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Kegiatan Khusus</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-star text-yellow-500 mr-2"></i>Natal Anak (Desember)</li>
+                                <li><i class="fas fa-star text-yellow-500 mr-2"></i>Paskah Anak (Maret/April)</li>
+                                <li><i class="fas fa-star text-yellow-500 mr-2"></i>Piknik & Outbound (Semester)</li>
+                                <li><i class="fas fa-star text-yellow-500 mr-2"></i>Lomba & Kompetisi Alkitab</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                            <p class="font-semibold text-gray-800 mb-2">Informasi Kontak</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-user mr-2"></i>Koordinator: Ibu Maria Sitorus</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-phone mr-2"></i>0812-3456-7890</p>
+                        </div>
+                    </div>
+                `
+            },
+            nhkbp: {
+                title: 'NHKBP (Pemuda)',
+                icon: 'fa-users',
+                color: 'from-blue-500 to-purple-600',
+                content: `
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 pb-4 border-b">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">NHKBP (Naposobuhi HKBP)</h4>
+                                <p class="text-gray-600">Usia 13-35 Tahun</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Tentang NHKBP</h5>
+                            <p class="text-gray-600">
+                                Naposobuhi HKBP adalah wadah persekutuan pemuda HKBP yang fokus pada pengembangan spiritual, 
+                                kepemimpinan, dan talenta kaum muda. Kami percaya bahwa pemuda adalah aset berharga gereja yang 
+                                harus diberdayakan untuk menjadi generasi yang tangguh dalam iman.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Kegiatan Rutin</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Ibadah Pemuda</h6>
+                                        <p class="text-sm text-gray-600">Setiap Sabtu pukul 16:00 WIB</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Kelompok Sel</h6>
+                                        <p class="text-sm text-gray-600">Diskusi & sharing Alkitab</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Musik & Kreativitas</h6>
+                                        <p class="text-sm text-gray-600">Band, paduan suara, multimedia</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Olahraga & Persekutuan</h6>
+                                        <p class="text-sm text-gray-600">Futsal, basket, badminton</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Program Unggulan</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-star text-blue-500 mr-2"></i>Retreat Pemuda (Tahunan)</li>
+                                <li><i class="fas fa-star text-blue-500 mr-2"></i>Leadership Training</li>
+                                <li><i class="fas fa-star text-blue-500 mr-2"></i>Bakti Sosial & Penginjilan</li>
+                                <li><i class="fas fa-star text-blue-500 mr-2"></i>Festival Musik Rohani</li>
+                                <li><i class="fas fa-star text-blue-500 mr-2"></i>Coaching & Mentoring</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                            <p class="font-semibold text-gray-800 mb-2">Informasi Kontak</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-user mr-2"></i>Ketua NHKBP: Daniel Purba</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-phone mr-2"></i>0813-4567-8901</p>
+                        </div>
+                    </div>
+                `
+            },
+            odhkbp: {
+                title: 'ODHKBP (Perempuan)',
+                icon: 'fa-female',
+                color: 'from-pink-400 to-red-500',
+                content: `
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 pb-4 border-b">
+                            <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-red-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-female text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">ODHKBP (Organisasi Perempuan HKBP)</h4>
+                                <p class="text-gray-600">Perempuan Dewasa</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Tentang ODHKBP</h5>
+                            <p class="text-gray-600">
+                                Organisasi Perempuan HKBP adalah wadah pembinaan dan pemberdayaan kaum perempuan dalam gereja. 
+                                Kami fokus pada pengembangan spiritualitas, keterampilan, dan pelayanan kasih yang menjadi 
+                                teladan bagi keluarga dan masyarakat.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Kegiatan Rutin</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Persekutuan Doa</h6>
+                                        <p class="text-sm text-gray-600">Setiap Rabu pukul 14:00 WIB</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Kelompok Bina Iman</h6>
+                                        <p class="text-sm text-gray-600">Pendalaman Alkitab & sharing</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Keterampilan & Usaha</h6>
+                                        <p class="text-sm text-gray-600">Pelatihan kewirausahaan</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Pelayanan Kasih</h6>
+                                        <p class="text-sm text-gray-600">Kunjungan pastoral & sosial</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Program Unggulan</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-star text-pink-500 mr-2"></i>Seminar Keluarga & Parenting</li>
+                                <li><i class="fas fa-star text-pink-500 mr-2"></i>Bakti Sosial & Kesehatan</li>
+                                <li><i class="fas fa-star text-pink-500 mr-2"></i>Pelatihan Keterampilan (Memasak, Menjahit, dll)</li>
+                                <li><i class="fas fa-star text-pink-500 mr-2"></i>Retreat Perempuan</li>
+                                <li><i class="fas fa-star text-pink-500 mr-2"></i>Pelayanan di Panti Asuhan & Rumah Sakit</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-pink-50 border-l-4 border-pink-500 p-4">
+                            <p class="font-semibold text-gray-800 mb-2">Informasi Kontak</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-user mr-2"></i>Ketua ODHKBP: Ibu Ruth Simbolon</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-phone mr-2"></i>0814-5678-9012</p>
+                        </div>
+                    </div>
+                `
+            },
+            lhkbp: {
+                title: 'LHKBP (Laki-laki)',
+                icon: 'fa-male',
+                color: 'from-green-500 to-teal-600',
+                content: `
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 pb-4 border-b">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-male text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">LHKBP (Organisasi Laki-laki HKBP)</h4>
+                                <p class="text-gray-600">Laki-laki Dewasa</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Tentang LHKBP</h5>
+                            <p class="text-gray-600">
+                                Organisasi Laki-laki HKBP adalah wadah pembinaan spiritual dan pengembangan kepemimpinan 
+                                kristiani bagi kaum laki-laki. Kami fokus pada pembentukan karakter sebagai kepala keluarga 
+                                yang bertanggung jawab dan pemimpin gereja yang melayani.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Kegiatan Rutin</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Persekutuan Pria</h6>
+                                        <p class="text-sm text-gray-600">Setiap Jumat pukul 19:00 WIB</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Diskusi & Mentoring</h6>
+                                        <p class="text-sm text-gray-600">Kepemimpinan & spiritualitas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Kegiatan Olahraga</h6>
+                                        <p class="text-sm text-gray-600">Futsal, golf, hiking</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Pelayanan Praktis</h6>
+                                        <p class="text-sm text-gray-600">Perbaikan gereja & sosial</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Program Unggulan</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-star text-green-500 mr-2"></i>Seminar Kepemimpinan Keluarga</li>
+                                <li><i class="fas fa-star text-green-500 mr-2"></i>Retreat & Camping</li>
+                                <li><i class="fas fa-star text-green-500 mr-2"></i>Bakti Sosial & Renovasi</li>
+                                <li><i class="fas fa-star text-green-500 mr-2"></i>Pelatihan Kewirausahaan</li>
+                                <li><i class="fas fa-star text-green-500 mr-2"></i>Men's Conference</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                            <p class="font-semibold text-gray-800 mb-2">Informasi Kontak</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-user mr-2"></i>Ketua LHKBP: Bpk. Thomas Manurung</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-phone mr-2"></i>0815-6789-0123</p>
+                        </div>
+                    </div>
+                `
+            },
+            mamre: {
+                title: 'Mamre (Lansia)',
+                icon: 'fa-heart',
+                color: 'from-indigo-500 to-blue-600',
+                content: `
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 pb-4 border-b">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">Mamre (Pelayanan Lansia)</h4>
+                                <p class="text-gray-600">Lanjut Usia 60+ Tahun</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Tentang Mamre</h5>
+                            <p class="text-gray-600">
+                                Mamre adalah pelayanan khusus untuk jemaat lanjut usia yang memberikan perhatian pada kebutuhan 
+                                spiritual, kesehatan, dan sosial mereka. Kami percaya bahwa lansia adalah harta karun gereja 
+                                yang penuh hikmat dan pengalaman iman.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Kegiatan Rutin</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Persekutuan Doa</h6>
+                                        <p class="text-sm text-gray-600">Setiap Selasa pukul 10:00 WIB</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Senam Lansia</h6>
+                                        <p class="text-sm text-gray-600">Kamis pagi, olahraga ringan</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Cek Kesehatan</h6>
+                                        <p class="text-sm text-gray-600">Pemeriksaan rutin bulanan</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <div>
+                                        <h6 class="font-semibold text-gray-800">Kunjungan Pastoral</h6>
+                                        <p class="text-sm text-gray-600">Pendampingan & pelayanan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Program Unggulan</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-star text-indigo-500 mr-2"></i>Rekreasi & Wisata Rohani</li>
+                                <li><i class="fas fa-star text-indigo-500 mr-2"></i>Perayaan Ulang Tahun Kolektif</li>
+                                <li><i class="fas fa-star text-indigo-500 mr-2"></i>Seminar Kesehatan Lansia</li>
+                                <li><i class="fas fa-star text-indigo-500 mr-2"></i>Pelayanan Home Care</li>
+                                <li><i class="fas fa-star text-indigo-500 mr-2"></i>Sharing Kesaksian & Hikmat</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4">
+                            <p class="font-semibold text-gray-800 mb-2">Informasi Kontak</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-user mr-2"></i>Koordinator: Ibu Esther Simatupang</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-phone mr-2"></i>0816-7890-1234</p>
+                        </div>
+                    </div>
+                `
+            },
+            paduanSuara: {
+                title: 'Paduan Suara',
+                icon: 'fa-music',
+                color: 'from-purple-500 to-pink-600',
+                content: `
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 pb-4 border-b">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-music text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">Paduan Suara</h4>
+                                <p class="text-gray-600">Pelayanan Musik & Pujian</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Tentang Paduan Suara</h5>
+                            <p class="text-gray-600">
+                                Paduan Suara HKBP adalah pelayanan musik gerejawi yang bertujuan memperindah ibadah dan 
+                                memuliakan nama Tuhan melalui nyanyian pujian. Kami terbuka untuk semua usia yang memiliki 
+                                talenta bernyanyi dan hati untuk melayani Tuhan.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Jenis Paduan Suara</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h6 class="font-semibold text-gray-800 mb-2">Paduan Suara Dewasa</h6>
+                                    <p class="text-sm text-gray-600">SATB (Soprano, Alto, Tenor, Bass)</p>
+                                    <p class="text-sm text-gray-600 mt-1"><i class="far fa-clock mr-1"></i>Latihan: Kamis 19:00</p>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h6 class="font-semibold text-gray-800 mb-2">Paduan Suara Remaja</h6>
+                                    <p class="text-sm text-gray-600">Usia 13-21 tahun</p>
+                                    <p class="text-sm text-gray-600 mt-1"><i class="far fa-clock mr-1"></i>Latihan: Sabtu 15:00</p>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h6 class="font-semibold text-gray-800 mb-2">Paduan Suara Anak</h6>
+                                    <p class="text-sm text-gray-600">Usia 6-12 tahun</p>
+                                    <p class="text-sm text-gray-600 mt-1"><i class="far fa-clock mr-1"></i>Latihan: Sabtu 14:00</p>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h6 class="font-semibold text-gray-800 mb-2">Vocal Group</h6>
+                                    <p class="text-sm text-gray-600">Group kecil & ensemble</p>
+                                    <p class="text-sm text-gray-600 mt-1"><i class="far fa-clock mr-1"></i>Jadwal fleksibel</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-3">Kegiatan & Pelayanan</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-star text-purple-500 mr-2"></i>Pelayanan Ibadah Minggu</li>
+                                <li><i class="fas fa-star text-purple-500 mr-2"></i>Konser Musik Rohani</li>
+                                <li><i class="fas fa-star text-purple-500 mr-2"></i>Festival Paduan Suara</li>
+                                <li><i class="fas fa-star text-purple-500 mr-2"></i>Rekaman Album Rohani</li>
+                                <li><i class="fas fa-star text-purple-500 mr-2"></i>Pertukaran Paduan Suara antar Gereja</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4">
+                            <p class="font-semibold text-gray-800 mb-2">Informasi Kontak</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-user mr-2"></i>Dirigent: Bpk. Samuel Hutabarat</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-phone mr-2"></i>0817-8901-2345</p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function showDetail(pelayanan) {
+            const modal = document.getElementById('detailModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+
+            const data = pelayananData[pelayanan];
+            modalTitle.textContent = data.title;
+            modalContent.innerHTML = data.content;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDetail() {
+            const modal = document.getElementById('detailModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('detailModal').addEventListener('click', (e) => {
+            if (e.target.id === 'detailModal') {
+                closeDetail();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeDetail();
+            }
+        });
+    </script>
+</body>
+
+</html>
