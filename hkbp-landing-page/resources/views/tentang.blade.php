@@ -1,0 +1,726 @@
+@extends('layouts.app')
+
+@section('title', 'Tentang Kami - HKBP')
+
+@section('content')
+    <!-- Hero Section -->
+    <section class="relative h-96 mt-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1516450137517-162bfbeb8dba?w=1920" alt="Tentang HKBP"
+                class="w-full h-full object-cover mix-blend-overlay">
+        </div>
+
+        <div class="relative container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="text-white text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Tentang Kami</h1>
+                <p class="text-xl md:text-2xl">Mengenal HKBP lebih dekat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="{{ route('home') }}" class="hover:text-blue-900">Home</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span class="text-blue-900 font-semibold">Tentang Kami</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sejarah Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Sejarah Gereja</h2>
+                    <div class="w-24 h-1 bg-blue-900 mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                    <div>
+                        <img src="https://scontent.fcgk27-1.fna.fbcdn.net/v/t39.30808-6/482346691_965807852360417_5908495339681818095_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHPeIr6lKTw0u6xZaIoGN1NVx4wOrN0AqVXHjA6s3QCpTh4YFQML8vmGZVgZRyxvfMK6BPiDbYhjkAwdoLPxS9i&_nc_ohc=wsT0w1dHI0QQ7kNvwFSoVNN&_nc_oc=AdkEgpYkMmS2g1hVJrN83yx-E-iUO_CMK2Slcx4j2-ACxRoh_GeVMBt17fl4T1EzrUM&_nc_zt=23&_nc_ht=scontent.fcgk27-1.fna&_nc_gid=6xbCpb1127d90-dO25jSGg&oh=00_AfopjgJspejVtUsqW3bENXr87m4OHFMD2_TsX_SlfmTquQ&oe=697791E2"
+                            alt="Sejarah HKBP" class="rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Awal Mula Berdirinya</h3>
+                        <p class="text-gray-600 mb-4">
+                            HKBP (Huria Kristen Batak Protestan) didirikan pada tanggal 7 Oktober 1861 oleh Misionaris
+                            Jerman Ludwig Ingwer Nommensen di Tanah Batak, Sumatera Utara. Gereja ini merupakan salah
+                            satu gereja Protestan tertua dan terbesar di Indonesia.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            Perkembangan HKBP tidak lepas dari perjuangan para misionaris dan pemimpin gereja yang teguh
+                            dalam iman. Melalui berbagai tantangan dan rintangan, HKBP terus bertumbuh dan menyebarkan
+                            Injil Kristus ke seluruh pelosok Nusantara.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-8 mb-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Perjalanan Sejarah</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-32 text-blue-900 font-bold text-lg">1861</div>
+                            <div class="flex-grow border-l-2 border-blue-900 pl-6 pb-6">
+                                <h4 class="font-bold text-gray-800 mb-2">Kelahiran HKBP</h4>
+                                <p class="text-gray-600">Ludwig Ingwer Nommensen memulai pekabaran Injil di Tanah Batak
+                                    dan mendirikan gereja pertama.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-32 text-blue-900 font-bold text-lg">1930</div>
+                            <div class="flex-grow border-l-2 border-blue-900 pl-6 pb-6">
+                                <h4 class="font-bold text-gray-800 mb-2">Perkembangan Pesat</h4>
+                                <p class="text-gray-600">HKBP berkembang pesat dengan ratusan jemaat tersebar di seluruh
+                                    Indonesia.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-32 text-blue-900 font-bold text-lg">1950-an</div>
+                            <div class="flex-grow border-l-2 border-blue-900 pl-6 pb-6">
+                                <h4 class="font-bold text-gray-800 mb-2">Masa Kemandirian</h4>
+                                <p class="text-gray-600">HKBP menjadi gereja yang mandiri dengan kepemimpinan lokal yang
+                                    kuat.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-32 text-blue-900 font-bold text-lg">Sekarang</div>
+                            <div class="flex-grow pl-6">
+                                <h4 class="font-bold text-gray-800 mb-2">HKBP Modern</h4>
+                                <p class="text-gray-600">Melanjutkan warisan iman dengan lebih dari 4 juta anggota di
+                                    seluruh dunia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi Misi Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Visi & Misi</h2>
+                    <div class="w-24 h-1 bg-blue-900 mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Visi -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-eye text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Visi</h3>
+                        </div>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Menjadi gereja yang hidup, bertumbuh dalam iman, pengharapan, dan kasih, serta menjadi
+                            berkat bagi sesama dalam mewujudkan Kerajaan Allah di bumi.
+                        </p>
+                    </div>
+
+                    <!-- Misi -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-bullseye text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Misi</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-900 mr-3 mt-1"></i>
+                                <span>Memberitakan Injil Yesus Kristus kepada semua orang</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-900 mr-3 mt-1"></i>
+                                <span>Membina jemaat yang dewasa dalam iman dan pengetahuan</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-900 mr-3 mt-1"></i>
+                                <span>Melayani sesama dengan kasih dan kepedulian sosial</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-900 mr-3 mt-1"></i>
+                                <span>Membangun persekutuan yang kudus dan harmonis</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Pendeta & Majelis Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Profil Pendeta, Sintua, & Parhalado</h2>
+                <div class="w-24 h-1 bg-blue-900 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kepemimpinan rohani yang melayani dengan dedikasi dan kasih
+                </p>
+            </div>
+
+            <!-- Pendeta -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-lg shadow-xl overflow-hidden">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/3 p-8 flex justify-center">
+                            <div class="w-48 h-48 bg-white rounded-full overflow-hidden border-4 border-white shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400" alt="Pendeta"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-8 text-white">
+                            <div class="mb-2">
+                                <span class="bg-blue-800  py-1 rounded-full text-sm">Pendeta Resort</span>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-2">Pdt. Johannes Sitompul, S.Th</h3>
+                            <p class="text-blue-200 mb-4">Gembala Jemaat HKBP</p>
+                            <p class="mb-4 leading-relaxed">
+                                Melayani sebagai pendeta resort sejak tahun 2020, membimbing jemaat dengan penuh kasih
+                                dan dedikasi dalam perjalanan iman mereka.
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p><i class="fas fa-envelope mr-2"></i>pendeta@hkbp.or.id</p>
+                                <p><i class="fas fa-phone mr-2"></i>(021) 1234-5678</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pendeta -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-lg shadow-xl overflow-hidden">
+                    <div class="md:flex items-center">
+                        <div class="md:w-1/3 p-8 flex justify-center">
+                            <div class="w-48 h-48 bg-white rounded-full overflow-hidden border-4 border-white shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400" alt="Pendeta"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-8 text-white">
+                            <div class="mb-2">
+                                <span class="bg-blue-800 py-1 rounded-full text-sm">Pembantu Pendeta Resort</span>
+                            </div>
+                            <h3 class="text-3xl font-bold mb-2">Pdt. Johannes Sitompul, S.Th</h3>
+                            <p class="text-blue-200 mb-4">Gembala Jemaat HKBP</p>
+                            <p class="mb-4 leading-relaxed">
+                                Melayani sebagai pendeta resort sejak tahun 2020, membimbing jemaat dengan penuh kasih
+                                dan dedikasi dalam perjalanan iman mereka.
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <p><i class="fas fa-envelope mr-2"></i>pendeta@hkbp.or.id</p>
+                                <p><i class="fas fa-phone mr-2"></i>(021) 1234-5678</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sintua -->
+            <div class="max-w-6xl mx-auto mb-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Sintua</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Majelis 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+                                alt="Ketua Majelis" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Ketua
+                                    Majelis</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Daniel Situmorang</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Memimpin majelis dengan bijaksana dan melayani jemaat
+                                dengan sepenuh hati.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Wakil Ketua"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Wakil
+                                    Ketua</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Martua Siahaan</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mendampingi ketua dalam kepemimpinan dan pelayanan kepada
+                                jemaat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Sekretaris"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span
+                                    class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Sekretaris</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Samuel Hutabarat</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mengatur administrasi dan dokumentasi kegiatan gereja
+                                dengan teliti.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Bendahara"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span
+                                    class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Bendahara</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Jhonson Napitupulu</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mengelola keuangan gereja dengan transparan dan bertanggung
+                                jawab.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 5 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=400" alt="Komisi Anak"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Komisi
+                                    Anak</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. David Silitonga</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Membina dan mengembangkan pelayanan Sekolah Minggu dan
+                                anak-anak.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 6 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400"
+                                alt="Komisi Pemuda" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Komisi
+                                    Pemuda</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Andreas Simanjuntak</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mengkoordinir kegiatan pemuda dan pengembangan spiritual
+                                generasi muda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Parhalado -->
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Parhalado</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Majelis 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+                                alt="Ketua Majelis" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Ketua
+                                    Majelis</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Daniel Situmorang</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Memimpin majelis dengan bijaksana dan melayani jemaat
+                                dengan sepenuh hati.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Wakil Ketua"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Wakil
+                                    Ketua</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Martua Siahaan</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mendampingi ketua dalam kepemimpinan dan pelayanan kepada
+                                jemaat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Sekretaris"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span
+                                    class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Sekretaris</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Samuel Hutabarat</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mengatur administrasi dan dokumentasi kegiatan gereja
+                                dengan teliti.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 4 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Bendahara"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span
+                                    class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Bendahara</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Jhonson Napitupulu</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mengelola keuangan gereja dengan transparan dan bertanggung
+                                jawab.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 5 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=400" alt="Komisi Anak"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Komisi
+                                    Anak</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. David Silitonga</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Membina dan mengembangkan pelayanan Sekolah Minggu dan
+                                anak-anak.</p>
+                        </div>
+                    </div>
+
+                    <!-- Majelis 6 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-72 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400"
+                                alt="Komisi Pemuda" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-2">
+                                <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold">Komisi
+                                    Pemuda</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-800 mb-1">Bpk. Andreas Simanjuntak</h4>
+                            <p class="text-gray-600 text-sm mb-3">Periode: 2023-2026</p>
+                            <p class="text-gray-600 text-sm">Mengkoordinir kegiatan pemuda dan pengembangan spiritual
+                                generasi muda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Struktur Organisasi Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Struktur Organisasi</h2>
+                    <div class="w-24 h-1 bg-blue-900 mx-auto mb-4"></div>
+                    <p class="text-gray-600">Tata kelola gereja yang terstruktur dan terorganisir</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <!-- Level 1 - Pendeta -->
+                    <div class="flex justify-center mb-8">
+                        <div class="text-center">
+                            <div class="bg-blue-900 text-white px-8 py-4 rounded-lg shadow-md mb-2">
+                                <h4 class="font-bold text-lg">Pendeta Resort</h4>
+                                <p class="text-sm">Pdt. Johannes Sitompul, S.Th</p>
+                            </div>
+                            <div class="w-1 h-8 bg-blue-900 mx-auto"></div>
+                        </div>
+                    </div>
+
+                    <!-- Level 2 - Majelis Harian -->
+                    <div class="flex justify-center mb-8">
+                        <div class="bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md">
+                            <h4 class="font-bold">Majelis Harian</h4>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center mb-8">
+                        <div class="w-1 h-8 bg-blue-900"></div>
+                    </div>
+
+                    <!-- Level 3 - Ketua, Wakil, Sekretaris, Bendahara -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                        <div class="bg-blue-100 border-2 border-blue-900 px-4 py-3 rounded-lg text-center">
+                            <h5 class="font-bold text-blue-900 text-sm">Ketua</h5>
+                            <p class="text-xs text-gray-700 mt-1">Daniel Situmorang</p>
+                        </div>
+                        <div class="bg-blue-100 border-2 border-blue-900 px-4 py-3 rounded-lg text-center">
+                            <h5 class="font-bold text-blue-900 text-sm">Wakil Ketua</h5>
+                            <p class="text-xs text-gray-700 mt-1">Martua Siahaan</p>
+                        </div>
+                        <div class="bg-blue-100 border-2 border-blue-900 px-4 py-3 rounded-lg text-center">
+                            <h5 class="font-bold text-blue-900 text-sm">Sekretaris</h5>
+                            <p class="text-xs text-gray-700 mt-1">Samuel Hutabarat</p>
+                        </div>
+                        <div class="bg-blue-100 border-2 border-blue-900 px-4 py-3 rounded-lg text-center">
+                            <h5 class="font-bold text-blue-900 text-sm">Bendahara</h5>
+                            <p class="text-xs text-gray-700 mt-1">Jhonson Napitupulu</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center mb-8">
+                        <div class="w-1 h-8 bg-blue-900"></div>
+                    </div>
+
+                    <!-- Level 4 - Komisi -->
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-gray-100 border-2 border-gray-300 px-4 py-3 rounded-lg">
+                            <h5 class="font-bold text-gray-800 text-sm mb-2">Komisi Anak</h5>
+                            <p class="text-xs text-gray-600">David Silitonga</p>
+                            <p class="text-xs text-gray-500 mt-1">Sekolah Minggu</p>
+                        </div>
+                        <div class="bg-gray-100 border-2 border-gray-300 px-4 py-3 rounded-lg">
+                            <h5 class="font-bold text-gray-800 text-sm mb-2">Komisi Pemuda</h5>
+                            <p class="text-xs text-gray-600">Andreas Simanjuntak</p>
+                            <p class="text-xs text-gray-500 mt-1">NHKBP</p>
+                        </div>
+                        <div class="bg-gray-100 border-2 border-gray-300 px-4 py-3 rounded-lg">
+                            <h5 class="font-bold text-gray-800 text-sm mb-2">Komisi Dewasa</h5>
+                            <p class="text-xs text-gray-600">Tim Majelis</p>
+                            <p class="text-xs text-gray-500 mt-1">ODHKBP & LHKBP</p>
+                        </div>
+                        <div class="bg-gray-100 border-2 border-gray-300 px-4 py-3 rounded-lg">
+                            <h5 class="font-bold text-gray-800 text-sm mb-2">Komisi Lansia</h5>
+                            <p class="text-xs text-gray-600">Tim Majelis</p>
+                            <p class="text-xs text-gray-500 mt-1">Mamre</p>
+                        </div>
+                        <div class="bg-gray-100 border-2 border-gray-300 px-4 py-3 rounded-lg">
+                            <h5 class="font-bold text-gray-800 text-sm mb-2">Komisi Musik</h5>
+                            <p class="text-xs text-gray-600">Tim Majelis</p>
+                            <p class="text-xs text-gray-500 mt-1">Paduan Suara</p>
+                        </div>
+                        <div class="bg-gray-100 border-2 border-gray-300 px-4 py-3 rounded-lg">
+                            <h5 class="font-bold text-gray-800 text-sm mb-2">Komisi Diakonia</h5>
+                            <p class="text-xs text-gray-600">Tim Majelis</p>
+                            <p class="text-xs text-gray-500 mt-1">Pelayanan Sosial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nilai-Nilai Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Nilai-Nilai Kami</h2>
+                    <div class="w-24 h-1 bg-blue-900 mx-auto mb-4"></div>
+                    <p class="text-gray-600">Prinsip yang menjadi landasan pelayanan kami</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Nilai 1 -->
+                    <div class="text-center group hover:transform hover:scale-105 transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-bible text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Alkitab Sebagai Dasar</h3>
+                        <p class="text-gray-600">Firman Tuhan adalah dasar iman dan kehidupan kami dalam setiap aspek
+                            pelayanan.</p>
+                    </div>
+
+                    <!-- Nilai 2 -->
+                    <div class="text-center group hover:transform hover:scale-105 transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-heart text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Kasih & Kepedulian</h3>
+                        <p class="text-gray-600">Melayani dengan kasih Kristus dan peduli terhadap kebutuhan sesama.</p>
+                    </div>
+
+                    <!-- Nilai 3 -->
+                    <div class="text-center group hover:transform hover:scale-105 transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-users text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Persekutuan</h3>
+                        <p class="text-gray-600">Membangun komunitas iman yang saling mendukung dan menguatkan.</p>
+                    </div>
+
+                    <!-- Nilai 4 -->
+                    <div class="text-center group hover:transform hover:scale-105 transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-praying-hands text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Doa & Ibadah</h3>
+                        <p class="text-gray-600">Mengutamakan kehidupan doa dan ibadah sebagai kekuatan pelayanan.</p>
+                    </div>
+
+                    <!-- Nilai 5 -->
+                    <div class="text-center group hover:transform hover:scale-105 transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-hand-holding-heart text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pelayanan</h3>
+                        <p class="text-gray-600">Melayani dengan rendah hati dan dedikasi penuh kepada Tuhan dan sesama.
+                        </p>
+                    </div>
+
+                    <!-- Nilai 6 -->
+                    <div class="text-center group hover:transform hover:scale-105 transition duration-300">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-seedling text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Pertumbuhan</h3>
+                        <p class="text-gray-600">Terus bertumbuh dalam iman, pengetahuan, dan karakter Kristiani.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistik Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">HKBP Dalam Angka</h2>
+                    <div class="w-24 h-1 bg-white mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8">
+                    <!-- Stat 1 -->
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2">163+</div>
+                        <div class="text-blue-200">Tahun Melayani</div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2">500+</div>
+                        <div class="text-blue-200">Anggota Jemaat</div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2">25+</div>
+                        <div class="text-blue-200">Program Pelayanan</div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="text-center">
+                        <div class="text-5xl font-bold mb-2">12</div>
+                        <div class="text-blue-200">Komisi Aktif</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Bergabunglah Bersama Kami</h2>
+                <p class="text-gray-600 text-lg mb-8">Mari bersekutu dan bertumbuh bersama dalam iman kepada Kristus</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="{{ route('kontak') }}"
+                        class="bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition inline-flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Hubungi Kami
+                    </a>
+                    <a href="{{ route('pelayanan') }}"
+                        class="bg-white text-blue-900 border-2 border-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition inline-flex items-center">
+                        <i class="fas fa-hands-helping mr-2"></i>
+                        Lihat Pelayanan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection
+
+@push('scripts')
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for statistics
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animation
+        document.querySelectorAll('.group').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+@endpush

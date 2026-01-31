@@ -1,0 +1,499 @@
+@extends('layouts.app')
+
+@section('title', 'Warta Jemaat - HKBP')
+
+@section('content')
+    <!-- Hero Section -->
+    <section class="relative h-96 mt-16">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920" alt="Warta Jemaat"
+                class="w-full h-full object-cover mix-blend-overlay">
+        </div>
+
+        <div class="relative container mx-auto px-4 h-full flex items-center justify-center">
+            <div class="text-white text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Warta Jemaat</h1>
+                <p class="text-xl md:text-2xl">Informasi Ibadah & Kegiatan Gereja</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="{{ route('home') }}" class="hover:text-blue-900">Home</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span class="text-blue-900 font-semibold">Warta Jemaat</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Warta (Minggu Ini) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Warta Minggu Ini</h2>
+                    <div class="w-24 h-1 bg-blue-900 mx-auto mb-4"></div>
+                    <p class="text-gray-600">Minggu, 26 Januari 2026 - Minggu Biasa III</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-xl overflow-hidden">
+                    <div class="md:flex">
+                        <!-- Preview Image -->
+                        <div
+                            class="md:w-2/5 bg-gradient-to-br from-blue-900 to-blue-700 p-8 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <i class="fas fa-bible text-8xl mb-6 opacity-80"></i>
+                                <h3 class="text-3xl font-bold mb-2">WARTA JEMAAT</h3>
+                                <p class="text-xl mb-4">26 Januari 2026</p>
+                                <div class="bg-white bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                                    <p class="text-sm font-semibold">Minggu Biasa III</p>
+                                    <p class="text-xs mt-1">Tahun Gerejawi B</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Preview -->
+                        <div class="md:w-3/5 p-8">
+                            <div class="mb-6">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-4">Informasi Ibadah Minggu</h4>
+
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-book-open text-blue-900 text-xl mt-1"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Bacaan Alkitab</h5>
+                                            <p class="text-gray-600 text-sm">Mazmur 62:6-13, 1 Korintus 7:29-31, Markus
+                                                1:14-20</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-quote-left text-blue-900 text-xl mt-1"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Tema</h5>
+                                            <p class="text-gray-600 text-sm">"Mengikut Yesus Tanpa Syarat"</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-microphone text-blue-900 text-xl mt-1"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Pengkhotbah</h5>
+                                            <p class="text-gray-600 text-sm">Pdt. Johannes Sitompul, S.Th</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-clock text-blue-900 text-xl mt-1"></i>
+                                        <div>
+                                            <h5 class="font-semibold text-gray-800">Jadwal Ibadah</h5>
+                                            <p class="text-gray-600 text-sm">Ibadah I: 07.00 WIB | Ibadah II: 09.00 WIB
+                                                | Ibadah Sore: 17.00 WIB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-t pt-6 flex flex-wrap gap-3">
+                                <a href="#"
+                                    class="flex-1 min-w-fit bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition inline-flex items-center justify-center">
+                                    <i class="fas fa-download mr-2"></i>Download PDF
+                                </a>
+                                <button onclick="showPreview()"
+                                    class="flex-1 min-w-fit bg-white text-blue-900 border-2 border-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition inline-flex items-center justify-center">
+                                    <i class="fas fa-eye mr-2"></i>Lihat Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arsip Warta Section -->
+    <section id="arsip" class="py-16 bg-gray-50 scroll-mt-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Arsip Warta Jemaat</h2>
+                    <p class="text-gray-600">Koleksi warta jemaat minggu-minggu sebelumnya</p>
+                </div>
+
+                <div class="my-6 mx-auto">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <!-- Search -->
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Cari Warta</label>
+                                <div class="relative">
+                                    <input type="text" id="searchInput"
+                                        placeholder="Cari berdasarkan tema, tanggal, atau minggu gerejawi..."
+                                        class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                                    <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+                                </div>
+                            </div>
+
+                            <!-- Filter by Year -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Tahun</label>
+                                <select id="yearFilter"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                                    <option value="all">Semua Tahun</option>
+                                    <option value="2026" selected>2026</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-blue-900 text-white">
+                                <tr>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold">Tanggal</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold">Minggu Gerejawi</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold">Tema</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold">Bacaan</th>
+                                    <th class="px-6 py-4 text-center text-sm font-semibold">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="wartaTableBody" class="divide-y divide-gray-200">
+                                <!-- Row 1 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2026"
+                                    data-search="19 januari 2026 minggu biasa ii panggilan pertama">
+                                    <td class="px-6 py-4 text-sm text-gray-800">19 Jan 2026</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Minggu Biasa II</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Panggilan Pertama</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">1 Samuel 3:1-10</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 2 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2026"
+                                    data-search="12 januari 2026 minggu biasa i baptisan yesus">
+                                    <td class="px-6 py-4 text-sm text-gray-800">12 Jan 2026</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Minggu Biasa I</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Baptisan Yesus</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Markus 1:4-11</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 3 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2026"
+                                    data-search="5 januari 2026 epifani penampakan tuhan">
+                                    <td class="px-6 py-4 text-sm text-gray-800">5 Jan 2026</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Epifani</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Penampakan Tuhan</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Matius 2:1-12</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 4 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2026"
+                                    data-search="1 januari 2026 tahun baru syukur atas tahun baru">
+                                    <td class="px-6 py-4 text-sm text-gray-800">1 Jan 2026</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Tahun Baru</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Syukur Atas Tahun Baru
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Galatia 4:4-7</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 5 - 2025 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2025"
+                                    data-search="25 desember 2025 natal kelahiran yesus kristus">
+                                    <td class="px-6 py-4 text-sm text-gray-800">25 Des 2025</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Natal</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Kelahiran Yesus Kristus
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Lukas 2:1-20</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 6 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2025"
+                                    data-search="21 desember 2025 adven iv kabar gembira">
+                                    <td class="px-6 py-4 text-sm text-gray-800">21 Des 2025</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Adven IV</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Kabar Gembira</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Lukas 1:26-38</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 7 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2025"
+                                    data-search="14 desember 2025 adven iii bersukacita dalam tuhan">
+                                    <td class="px-6 py-4 text-sm text-gray-800">14 Des 2025</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Adven III</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Bersukacita dalam Tuhan
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Filipi 4:4-7</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row 8 -->
+                                <tr class="hover:bg-gray-50 transition warta-row" data-year="2025"
+                                    data-search="7 desember 2025 adven ii persiapan jalan tuhan">
+                                    <td class="px-6 py-4 text-sm text-gray-800">7 Des 2025</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800">Adven II</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 font-semibold">Persiapan Jalan Tuhan</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Markus 1:1-8</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <div class="flex justify-center space-x-2">
+                                            <button onclick="showPreview()"
+                                                class="text-blue-900 hover:text-blue-700 transition" title="Preview">
+                                                <i class="fas fa-eye text-lg"></i>
+                                            </button>
+                                            <a href="#" class="text-green-600 hover:text-green-700 transition"
+                                                title="Download">
+                                                <i class="fas fa-download text-lg"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div id="noResults" class="hidden text-center py-12 px-4">
+                        <i class="fas fa-search text-gray-400 text-5xl mb-4"></i>
+                        <p class="text-gray-600 text-lg">Tidak ada warta yang ditemukan</p>
+                        <p class="text-gray-500 text-sm mt-2">Coba gunakan kata kunci atau filter lain</p>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="bg-gray-50 px-6 py-4 border-t">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm text-gray-600">Menampilkan 8 dari 8 warta</p>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition disabled:opacity-50"
+                                    disabled>
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="px-4 py-2 bg-blue-900 text-white rounded-lg font-semibold">1</button>
+                                <button
+                                    class="px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition disabled:opacity-50"
+                                    disabled>
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">Ikuti Ibadah Kami</h2>
+                <p class="text-xl mb-8">Bergabunglah dengan kami setiap hari Minggu untuk beribadah bersama</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#"
+                        class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center">
+                        <i class="fas fa-video mr-2"></i>Live Streaming
+                    </a>
+                    <a href="{{ route('kontak') }}"
+                        class="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition inline-flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2"></i>Kunjungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-gray-800">Preview Warta Jemaat</h3>
+                <button onclick="closePreview()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="bg-gray-100 rounded-lg p-8 text-center mb-6">
+                    <i class="fas fa-file-pdf text-red-600 text-6xl mb-4"></i>
+                    <p class="text-gray-600">Preview PDF akan ditampilkan di sini</p>
+                    <p class="text-sm text-gray-500 mt-2">Atau gunakan PDF viewer untuk melihat dokumen lengkap</p>
+                </div>
+                <div class="flex justify-center">
+                    <a href="#"
+                        class="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition inline-flex items-center">
+                        <i class="fas fa-download mr-2"></i>Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@push('scripts')
+    <script>
+        // Search and Filter Functionality
+        const searchInput = document.getElementById('searchInput');
+        const yearFilter = document.getElementById('yearFilter');
+        const wartaRows = document.querySelectorAll('.warta-row');
+        const noResults = document.getElementById('noResults');
+
+        function filterWarta() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedYear = yearFilter.value;
+            let visibleCount = 0;
+
+            wartaRows.forEach(row => {
+                const searchData = row.getAttribute('data-search');
+                const rowYear = row.getAttribute('data-year');
+
+                const matchesSearch = searchData.includes(searchTerm);
+                const matchesYear = selectedYear === 'all' || rowYear === selectedYear;
+
+                if (matchesSearch && matchesYear) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        searchInput.addEventListener('input', filterWarta);
+        yearFilter.addEventListener('change', filterWarta);
+
+        // Preview Modal Functions
+        function showPreview() {
+            document.getElementById('previewModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreview() {
+            document.getElementById('previewModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('previewModal').addEventListener('click', (e) => {
+            if (e.target.id === 'previewModal') {
+                closePreview();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePreview();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+@endpush
